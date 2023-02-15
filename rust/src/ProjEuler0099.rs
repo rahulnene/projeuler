@@ -1,5 +1,7 @@
-use std::fs::File;
-use std::io::{BufRead, BufReader};
+use std::{
+    fs::File,
+    io::{BufRead,BufReader},
+};
 
 fn compute(base: f64, exp: f64) -> f64 {
     exp * f64::log10(base)
