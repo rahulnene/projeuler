@@ -1,6 +1,5 @@
-use std::fs;
 fn main() {
-    let pyramid_str = fs::read_to_string("p067_triangle.txt").unwrap();
+    let pyramid_str = ;
     let mut pyramid: Vec<Vec<u32>> = Vec::new();
     for line in pyramid_str.lines() {
         pyramid.push(
@@ -17,5 +16,5 @@ fn main() {
         }
         pyramid.push(bottom_row);
     }
-    dbg!(pyramid);
+    dbg!(pyramid[0]);
 }
