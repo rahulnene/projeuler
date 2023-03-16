@@ -1,5 +1,5 @@
 fn main() {
-    let pyramid_str = ;
+    let pyramid_str = fs::read_to_string("p018_triangle.txt").unwrap();
     let mut pyramid: Vec<Vec<u32>> = Vec::new();
     for line in pyramid_str.lines() {
         pyramid.push(
