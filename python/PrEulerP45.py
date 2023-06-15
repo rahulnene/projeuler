@@ -1,34 +1,24 @@
-from time import perf_counter
+import math
+import time
 
-t0 = perf_counter()
+def main():
+    start = time.time()
+    n = 1
+    count = 0
 
-pents = []
-hex = []
+    while count < 4:
+        hex_num = n * (2 * n - 1)
+        if is_pentagonal(hex_num):
+            print(hex_num)
+            count += 1
+        n += 1
 
+    print("Time elapsed:", time.time() - start)
 
-def genHex():
-    for n in range(0, 100000):
-        temp = n
-        temp *= 2 * n - 1
-        hex.append(temp)
+def is_pentagonal(x):
+    sqrt = math.sqrt(1 + 24 * x)
+    pent = (sqrt + 1) / 6
+    return pent.is_integer()
 
-
-def checkPent(x):
-    det = pow(24 * x + 1, 0.5)
-    if (det + 1) % 6 == 0:
-        return True
-    return False
-
-
-def find():
-    genHex()
-    for item in hex:
-        if checkPent(item):
-            print(item)
-            if item > 40755: return 0
-
-
-find()
-
-t1 = perf_counter()
-print(t1 - t0, "seconds")
+if __name__ == "__main__":
+    main()
