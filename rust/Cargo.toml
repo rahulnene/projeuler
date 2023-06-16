@@ -4,6 +4,3 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-divisors = "0.2.1"
-primal = "0.3.2"
-rayon = "1.7.0"
