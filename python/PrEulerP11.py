@@ -36,3 +36,4 @@ print(prodHor(1))
 
 t1 = perf_counter()
 print(t1-t0)
+
