@@ -1,9 +1,10 @@
 use std::{time::Instant};
 
 fn main() {
+    
+    const A:u64 = 1_504_170_715_041_707;
+    const MOD:u64 = 4_503_599_627_370_517;
     let start = Instant::now();
-    const A:u64 = 1504170715041707;
-    const MOD:u64 = 4503599627370517;
 
     let (mut total, mut min, mut max) = (A,A,A);
 
@@ -18,6 +19,6 @@ fn main() {
         }
     }
 
-    println!("{}", total);
+    println!("{total}", );
     println!("{:?}", start.elapsed());
 }

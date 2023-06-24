@@ -1,10 +1,11 @@
+use std::fs;
 fn main() {
-    let pyramid_str = fs::read_to_string("p018_triangle.txt").unwrap();
+    let pyramid_str = fs::read_to_string("p018_triangle.txt").expect("File not found");
     let mut pyramid: Vec<Vec<u32>> = Vec::new();
     for line in pyramid_str.lines() {
         pyramid.push(
             line.split_whitespace()
-                .map(|s| s.parse().unwrap())
+                .map(|s| s.parse().expect("Failed to parse number"))
                 .collect(),
         );
     }
@@ -16,5 +17,5 @@ fn main() {
         }
         pyramid.push(bottom_row);
     }
-    dbg!(pyramid[0]);
+    dbg!(&pyramid[0]);
 }

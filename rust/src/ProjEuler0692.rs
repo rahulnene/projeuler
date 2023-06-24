@@ -4,7 +4,7 @@ fn main() {
     let fib = Fibonacci::new().take(RANGE + 1).collect::<Vec<u64>>();
     let mut G: Vec<u64> = vec![1; RANGE + 1];
     for n in 3..=RANGE {
-        G[n] = G[n - 1] + G[n - 2] + fib[n - 1]
+        G[n] = G[n - 1] + G[n - 2] + fib[n - 1];
     }
     dbg!(G[RANGE]);
 }
@@ -16,8 +16,8 @@ struct Fibonacci {
 }
 
 impl Fibonacci {
-    fn new() -> Self {
-        Fibonacci { a: 1, b: 0 }
+    const fn new() -> Self {
+        Self { a: 1, b: 0 }
     }
 }
 

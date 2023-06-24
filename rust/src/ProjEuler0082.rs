@@ -21,7 +21,7 @@ fn min_distance(
         down_curr += matrix[down][y];
     }
 
-    *lengths.iter().min().unwrap()
+    *lengths.iter().min().expect("Failed to find minimum")
 }
 
 fn compute(matrix: Vec<Vec<u32>>) -> u32 {
@@ -41,14 +41,14 @@ fn compute(matrix: Vec<Vec<u32>>) -> u32 {
         }
     }
 
-    mask.iter().map(|row| row[columns - 1]).min().unwrap()
+    mask.iter().map(|row| row[columns - 1]).min().expect("Failed to find minimum")
 }
 
 fn read_matrix() -> Vec<Vec<u32>> {
-    let pyramid_str = read_to_string("p082_matrix.txt").unwrap();
+    let pyramid_str = read_to_string("p082_matrix.txt").expect("Failed to read file");
     let mut pyramid: Vec<Vec<u32>> = Vec::new();
     for line in pyramid_str.lines() {
-        pyramid.push(line.split(',').map(|s| s.parse().unwrap()).collect());
+        pyramid.push(line.split(',').map(|s| s.parse().expect("Failed to parse as int")).collect());
     }
     pyramid
 }

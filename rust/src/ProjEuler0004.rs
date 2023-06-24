@@ -1,6 +1,6 @@
 fn main() {
-    let start = std::time::Instant::now();
     const RANGE: i32 = 1000;
+    let start = std::time::Instant::now();
     let mut largest = 0;
     for a in 100..RANGE {
         for b in 100..RANGE {
@@ -10,7 +10,7 @@ fn main() {
             }
         }
     }
-    println!("{}", largest);
+    println!("{largest}", );
     println!("{:?}", start.elapsed());
 }
 

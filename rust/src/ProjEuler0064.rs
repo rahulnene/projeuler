@@ -23,7 +23,7 @@ fn continued_fraction(n: u64) -> Vec<u64> {
     result
 }
 
-fn is_odd(n: u64) -> bool {
+const fn is_odd(n: u64) -> bool {
     n % 2 == 1
 }
 

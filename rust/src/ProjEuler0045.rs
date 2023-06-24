@@ -8,7 +8,7 @@ fn main() {
     while count <= 4 {
         let hex = n * (2 * n - 1);
         if is_pentagonal(hex) {
-            println!("{}", hex);
+            println!("{hex}");
             count += 1;
         }
         n += 1;
