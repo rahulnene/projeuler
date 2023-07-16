@@ -4,8 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [profile.release]
+strip = true
 lto = "fat"
-strip = "symbols"
 
 [dependencies]
-rayon = "1.7.0"
