@@ -3,5 +3,14 @@
 version = 3
 
 [[package]]
+name = "const-primes"
+version = "0.4.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "64a72b34a8fd3072745eb3e8bd2025702ac06f4ee6ff497d02d8e830e151bc27"
+
+[[package]]
 name = "rust"
 version = "0.1.0"
+dependencies = [
+ "const-primes",
+]
