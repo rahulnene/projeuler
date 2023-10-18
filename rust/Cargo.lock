@@ -9,8 +9,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "64a72b34a8fd3072745eb3e8bd2025702ac06f4ee6ff497d02d8e830e151bc27"
 
 [[package]]
+name = "machine-prime"
+version = "1.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b4b0faa8e755420f3bf8039364404a8b5d63929ba08fabc4ff7996773e03f881"
+
+[[package]]
+name = "roots"
+version = "0.0.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "082f11ffa03bbef6c2c6ea6bea1acafaade2fd9050ae0234ab44a2153742b058"
+
+[[package]]
 name = "rust"
 version = "0.1.0"
 dependencies = [
  "const-primes",
+ "machine-prime",
+ "roots",
 ]
