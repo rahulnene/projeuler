@@ -8,5 +8,6 @@ strip = true
 
 [dependencies]
 const-primes = "0.4.7"
+itertools = "0.13.0"
 machine-prime = "1.2.2"
-roots = "0.0.8"
+rayon = "1.10.0"

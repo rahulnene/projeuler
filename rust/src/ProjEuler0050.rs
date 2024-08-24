@@ -1,7 +1,6 @@
 use std::time::Instant;
 
 use machine_prime::{self, is_prime};
-use rayon::iter::{ParallelBridge, ParallelIterator};
 
 fn main() {
     let max = 1_000_000;
